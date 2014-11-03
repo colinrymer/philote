@@ -1,0 +1,9 @@
+---
+
+- name: dotfiles repo
+  git: repo=ssh://git@github.com/colinrymer/dotfiles.git dest=/Users/colin/.dotfiles accept_hostkey=yes
+
+- name: install dotfiles
+  shell: SKIP_ALL=true rake
+  args:
+    chdir: /Users/colin/.dotfiles

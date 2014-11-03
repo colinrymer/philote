@@ -1,0 +1,8 @@
+---
+ - homebrew_tap: tap="{{ item }}" state=present
+   with_items:
+     - caskroom/cask
+     - caskroom/versions
+     - homebrew/dupes
+     - homebrew/versions
+

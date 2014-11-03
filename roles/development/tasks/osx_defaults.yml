@@ -1,0 +1,48 @@
+---
+- name: Disable "natural" scrolling
+  shell: defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+- name: Remove all from Dock
+  shell: dockutil --remove all
+
+- name: Auto-hide Dock
+  shell: defaults write com.apple.dock autohide -bool true && defaults write com.apple.dock autohide-delay -float 0 && defaults write com.apple.dock autohide-time-modifier -float 0
+
+- name: Speed up window resize
+  shell: defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+- name: Expand save panel by default
+  shell: defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true && defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true&& defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+- name: Quit printer app when done printing
+  shell: defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+- name: Save to disk by default
+  shell: defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+- name: Check for software updates daily
+  shell: defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+- name: ctrl+opt+cmd+t dark mode toggle
+  shell: sudo defaults write /Library/Preferences/.GlobalPreferences.plist _HIEnableThemeSwitchHotKey -bool true
+
+- name: disable sudden motion sensor
+  shell: sudo pmset -a sms 0
+
+- name: no swipe nav in Chrome
+  shell: defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+
+# Hot Corners
+- name: Speed up Mission Control animations
+  shell: defaults write com.apple.dock expose-animation-duration -float 0.1
+
+- name: Mission Control in top left hot corner
+  shell: defaults write com.apple.dock wvous-tl-corner -int 2 && defaults write com.apple.dock wvous-tl-modifier -int 0
+
+- name: Put display to sleep in top right hot corner
+  shell: defaults write com.apple.dock wvous-tr-corner -int 10 && defaults write com.apple.dock wvous-tr-modifier -int 0
+
+- name: Desktop in bottom right hot corner
+  shell: defaults write com.apple.dock wvous-br-corner -int 4 && defaults write com.apple.dock wvous-br-modifier -int 0
+
+
