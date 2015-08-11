@@ -32,6 +32,12 @@
 - name: no swipe nav in Chrome
   shell: defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
+- name: always show scrollbars
+  shell: defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+
+- name: show battery percentage
+  shell: defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
 # Hot Corners
 - name: Speed up Mission Control animations
   shell: defaults write com.apple.dock expose-animation-duration -float 0.1
@@ -44,5 +50,4 @@
 
 - name: Desktop in bottom right hot corner
   shell: defaults write com.apple.dock wvous-br-corner -int 4 && defaults write com.apple.dock wvous-br-modifier -int 0
-
 
