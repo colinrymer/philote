@@ -5,7 +5,7 @@
 - name: dotfiles repo
   git:
     repo: "ssh://git@github.com/colinrymer/dotfiles.git"
-    dest: /Users/colin/.dotfiles
+    dest: "{{ lookup('env','HOME') }}/.dotfiles"
     accept_hostkey: yes
 
 - name: install dotfiles
