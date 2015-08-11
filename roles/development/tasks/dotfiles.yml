@@ -1,6 +1,12 @@
 ---
-- homebrew_tap:
+- name: thoughtbot homebrew tap
+  homebrew_tap:
     tap: thoughtbot/formulae
+
+- name: install rcm
+  homebrew:
+    name: rcm
+    update_homebrew: yes
 
 - name: dotfiles repo
   git:
