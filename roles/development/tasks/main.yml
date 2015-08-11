@@ -1,5 +1,2 @@
-- include: brew_taps.yml
-- include: brews.yml
-- include: casks.yml
 - include: osx_defaults.yml
 - include: dotfiles.yml
