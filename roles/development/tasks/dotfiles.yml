@@ -1,7 +1,10 @@
 ---
-- name: thoughtbot homebrew tap
+- name: homebrew taps
   homebrew_tap:
-    tap: thoughtbot/formulae
+    tap: "{{ item }}"
+  with_items:
+    - thoughtbot/formulae
+    - homebrew/bundle
 
 - name: install rcm
   homebrew:
