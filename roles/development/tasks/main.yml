@@ -1,2 +1,2 @@
-- include: osx_defaults.yml
 - include: dotfiles.yml
+- include: osx_defaults.yml
