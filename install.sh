@@ -11,4 +11,4 @@ curl -fsSL https://github.com/colinrymer/philote/archive/master.zip -o philote.z
 unzip philote.zip
 rm philote.zip
 
-ansible-playbook -i philote/localhost philote/localhost.yml
+ansible-playbook -i philote-master/localhost philote-master/localhost.yml
