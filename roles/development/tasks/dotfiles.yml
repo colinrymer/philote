@@ -4,7 +4,6 @@
     tap: "{{ item }}"
   with_items:
     - thoughtbot/formulae
-    - homebrew/bundle
 
 - name: install rcm
   homebrew:
