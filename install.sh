@@ -7,7 +7,7 @@ brew install ansible
 
 cd $TMPDIR
 
-curl https://github.com/colinrymer/philote/archive/master.zip -o philote.zip
+curl -fsSL https://github.com/colinrymer/philote/archive/master.zip -o philote.zip
 unzip philote.zip
 rm philote.zip
 
