@@ -1,2 +1,2 @@
-- include: dotfiles.yml
-- include: osx_defaults.yml
+- include_tasks: dotfiles.yml
+- include_tasks: osx_defaults.yml
