@@ -15,13 +15,8 @@ fi
 
 cd $TMPDIR
 
-if test -f philote.zip; then
-  rm -f philote.zip
-fi
-
-if test -d philote-master; then
-  rm -rf philote-master
-fi
+rm -f philote.zip
+rm -rf philote-master
 
 curl -fsSL https://github.com/colinrymer/philote/archive/master.zip -o philote.zip
 unzip philote.zip
