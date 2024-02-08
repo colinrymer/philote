@@ -9,8 +9,6 @@ if test -f /opt/homebrew/bin/brew; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-brew list | grep ansible
-
 if [ -z $(brew list | grep ansible) ]; then
   brew install ansible
 fi
