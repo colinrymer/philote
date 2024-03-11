@@ -35,8 +35,12 @@
 - name: always show scrollbars
   shell: defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
-- name: show battery percentage
-  shell: defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+# disabled because iStat Menus can show battery info
+# - name: show battery percentage
+#  shell: defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+- name: reduce space menu bar items take up so they are not hidden by the notch
+  shell: defaults -currentHost write -globalDomain NSStatusItemSpacing -int 8 && defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 6
 
 # Hot Corners
 - name: Speed up Mission Control animations
@@ -50,4 +54,3 @@
 
 - name: Desktop in bottom right hot corner
   shell: defaults write com.apple.dock wvous-br-corner -int 4 && defaults write com.apple.dock wvous-br-modifier -int 0
-
