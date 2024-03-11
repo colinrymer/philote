@@ -1,4 +1,4 @@
-  #!/bin/bash
+#!/bin/bash
 set -eux
 
 # Try to add homebrew to PATH on apple silicon
