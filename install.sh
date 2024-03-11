@@ -26,8 +26,8 @@ echo "Using directory: ${tmp_dir}"
 
 cd $tmp_dir
 
-curl -fsSL https://github.com/colinrymer/philote/archive/master.zip -o philote.zip
+curl -fsSL https://github.com/colinrymer/philote/archive/main.zip -o philote.zip
 unzip philote.zip
 rm philote.zip
 
-ansible-playbook -i philote-master/localhost philote-master/localhost.yml
+ansible-playbook -i philote-main/localhost philote-main/localhost.yml
